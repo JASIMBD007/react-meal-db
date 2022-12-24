@@ -14,8 +14,12 @@ const Restaurant = () => {
             .then(data => setMeals(data.meals));
     }, []);
 
+    //add click handler
+
     const handleAddToOrder = meal => {
-        console.log(meal);
+        // console.log(meal);
+        const newOrders = [...orders, meal];
+        setOrders(newOrders);
         addToDb(meal.idMeal);
     }
 
