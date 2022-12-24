@@ -26,7 +26,9 @@ const Restaurant = () => {
         Read carefully, give it a try. [ Ki ache jibone]
         if  you need help, let us know in the support session
     */
-    
+    const handleAddToOrder = meal => {
+        console.log(meal);
+    }
 
     return (
         <div className="restaurant-menu">
@@ -35,6 +37,7 @@ const Restaurant = () => {
                     meals.map(meal => <Meal
                         key={meal.idMeal}
                         meal={meal}
+                        handleAddToOrder={handleAddToOrder}
                     ></Meal>)
                 }
             </div>
